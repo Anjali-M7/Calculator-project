@@ -1,38 +1,86 @@
-.container{
-    text-align: center;
-    margin-top:23px
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align heading and calculator vertically */
+    font-family: Arial, sans-serif;
 }
 
-table{
-    margin: auto;
+.container {
+    width: 100%;
+    max-width: 450px; /* Limit the width for larger screens */
+    margin: 0 auto; /* Center the calculator */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-input{
-    border-radius: 21px;
-    border: 5px solid #462446;
-    font-size:34px;
-    height: 65px;
-    width: 456px;
-}
-
-button{
-    border-radius: 20px;
-    font-size: 40px;
-    background: hsl(290, 28%, 75%);
-    width: 102px;
-    height: 90px;
-    margin: 6px;
-}
-
-.calculator{ 
+.calculator {
     border: 4px solid #78c2cf;
     background-color: #f1ab9a;
-    padding: 23px;
-    border-radius: 53px;
-    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh; /* Decreased height to make room for the heading */
 }
 
-h1{
-    font-size: 28px;
-    font-family: 'Courier New', Courier, monospace;
+h1 {
+    font-size: 2em; /* Ensure the heading is responsive */
+    margin-bottom: 10px; /* Add space between the heading and the calculator */
+}
+
+input {
+    border-radius: 20px;
+    border: 5px solid #462446;
+    font-size: 2em; /* Relative font size */
+    height: 60px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-spacing: 10px; /* Space between buttons */
+}
+
+button {
+    border-radius: 20px;
+    font-size: 1.5em;
+    background: hsl(290, 28%, 75%);
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Ensure the calculator and buttons adapt to smaller screens */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    input {
+        font-size: 1.5em;
+        height: 50px;
+    }
+
+    button {
+        font-size: 1.2em;
+        height: 50px;
+        padding: 10px;
+    }
+
+    table {
+        border-spacing: 5px; /* Less space between buttons on small screens */
+    }
 }
